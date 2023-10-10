@@ -21,4 +21,33 @@ Section D:
 7. aboutUsController.java, lines 9-10 made a mapping for the about us page
 
 Section E:
+1. BootStrapData.java, lines 59-97: added sample inventory of 5 different parts
+2. BootStrapData.java, lines 111-121: added sample inventory of 5 products
+3. BootStrapData.java, lines 58 and 110: added checks to see if the lists for product and part are 0 and only then do we add the sample inventory values
+
+Section D:
+1. confirmationPurchaseProduct.html, line 6: modified timer to redirect after 5 seconds instead of instant
+2. confirmationPurchaseProduct.html, line 10 and 12: modified text to reflect what the page does better (indicates successful purchase).
+
+3. failurePurchaseProduct.html, line 6: modified timer to redirect after 5 seconds instead of instant
+4. failurePurchaseProduct.html, line 10 and 12: modified text to reflect what the page does better (indicates failure to purchase product).
+
+5. AddProductController.java, lines 124 and 125: initialized buyProduct()
+6. AddProdcutController.java, lines 216 and 127: created new objects 
+7. AddProdcutController.java, lines 128-131: check that product is valid to be purchased
+8. AddProdcutController.java, lines 132-137: deincrement the inventory and delete if no inventory left
+
+9. ProductService.java, line 20: initialized deincrement method
+
+10. ProductServiceImpl.java, lines 70-74: defined deincrement method and intialized values we would need to perform opertations
+11. ProductServiceImpl.java, lines 76-82: double checked that our object (result) is valid
+12. ProductServiceImpl.java, lines 83-86: grabbed inventory value from our product object, deincremented it, and put it back in using getter and setter methods.
+13. ProductServiceImpl.java, line 87: returns our updated object
+
+14. mainscreen.html, lines 85 and 86: added new button that prompts to confirm purchase and redirects to new page, passes value needed to perform action to the controller
+
+Section G:
+1. Part.java, lines 31-34: initialized minInv and maxInv
+2. Part.java, lines 48-49 and 57-58: Updated constructor classes to use minInv and maxInv as well
+3. Part.java, lines 100-115: defined getter and setter methods for minInv and maxInv
 
