@@ -66,4 +66,24 @@ public class ProductServiceImpl implements ProductService{
         }
         return (List<Product>) productRepository.findAll();
     }
+
+    public Product deincrement (int theId) {
+        Long theIdl=(long)theId;
+        Optional<Product> result = productRepository.findById(theIdl);
+
+        Product theProduct = null;
+
+        if (result.isPresent()) {
+            theProduct = result.get();
+        }
+        else {
+            // we didn't find the product id
+            throw new RuntimeException("Did not find part id - " + theId);
+        }
+        int newInv = theProduct.getInv();
+        --newInv;
+        theProduct.setInv(newInv);
+
+        return theProduct;
+    }
 }
