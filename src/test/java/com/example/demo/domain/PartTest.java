@@ -100,7 +100,6 @@ class PartTest {
         partOut.setInv(inv);
         assertEquals(inv,partOut.getInv());
     }
-
     @Test
     void getProducts() {
         Product product1= new Product();
@@ -155,5 +154,21 @@ class PartTest {
         partIn.setId(1l);
         partOut.setId(1l);
         assertEquals(partIn.hashCode(),partOut.hashCode());
+    }
+    @Test
+    void testMinInv() {
+        int minimumInv = 1;
+        partIn.setMinInv(minimumInv);
+        assertEquals(minimumInv, partIn.getMinInv());
+        partOut.setMinInv(minimumInv);
+        assertEquals(minimumInv, partOut.getMinInv());
+    }
+    @Test
+    void testMaxInv() {
+        int maximumInv = 1000;
+        partIn.setMaxInv(maximumInv);
+        assertEquals(maximumInv, partIn.getMaxInv());
+        partOut.setMaxInv(maximumInv);
+        assertEquals(maximumInv, partOut.getMaxInv());
     }
 }
