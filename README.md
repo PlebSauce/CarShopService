@@ -47,7 +47,43 @@ Section D:
 14. mainscreen.html, lines 85 and 86: added new button that prompts to confirm purchase and redirects to new page, passes value needed to perform action to the controller
 
 Section G:
-1. Part.java, lines 31-34: initialized minInv and maxInv
-2. Part.java, lines 48-49 and 57-58: Updated constructor classes to use minInv and maxInv as well
-3. Part.java, lines 100-115: defined getter and setter methods for minInv and maxInv
+1. Part.java, line 20: added validation to part entity
+2. Part.java, line 4: imported validation file in
+3. Part.java, lines 33-37: initialzed integers for minInv and maxInv for parts
+4. Part.java, lines 47, 51-52, 55, and 60-61: updated constructors to account for minInv and maxInv fields
+5. Part.java, lines 103-118: added getter and setter methods for new minInv and maxInv fields
 
+6. BootStrapData.java, lines 65-66: Updated sample part to store min and max values for inventory
+7. BootStrapData.java, lines 75-76: Updated sample part to store min and max values for inventory
+8. BootStrapData.java, lines 85-86: Updated sample part to store min and max values for inventory
+9. BootStrapData.java, lines 95-96: Updated sample part to store min and max values for inventory
+10. BootStrapData.java, lines 105-106: Updated sample part to store min and max values for inventory
+
+11. mainscreen.html, lines 38-39 and 48-49: updated mainscreen tables to show new min and max values
+
+12. InhousePartFrom.html, lines 27-28: added minInv field to inhouse part form
+13. InhousePartForm.html, lines 30-31: added maxInv field to inhouse part form
+14. InhousePartForm.html, lines 23-25: added prompt to show up when an error is detected in form fields (validation)
+
+15. OuthousePartFrom.html, lines 27-28: added minInv field to outhouse part form
+16. OuthousePartForm.html, lines 30-31: added maxInv field to outhouse part form
+17. OuthousePartForm.html, lines 24-26: added prompt to show up when an error is detected in form fields (validation)
+
+18. ValidMinMax.java, lines 1-8: added imports needed to run
+19. ValidMinMax.java, lines 10-12: specified the constraint, target, and retention of our annotation file
+20. ValidMinMax.java, line 13: declared class ValidMinMax
+21. ValidMinMax.java, lines 14-16: specified message, scripts, and payload
+
+22. MinMaxValidator.java, lines 1-8: added imports needed to run
+23. MinMaxValidator.java, line 10: declared class that implements a constraint validator that our ValidMinMax class will use. Accepts a part object as input
+24. MinMaxValidator.java, lines 11-13: defined our context objects
+25. MinMaxValidator.java, lines 14-16: define our intialize class that is the super classs of constraint validator
+26. MinMaxValidator.java, lines 19-26: define our isValid class to actually do the check of whether or not a given part's inv is within the min-max range
+
+27. application.properties, line 6: updated h2 database name according to what I named it in my file system.
+
+Section H:
+
+Section I:
+PartTest.java, lines 158-165: added test for the minimum inventory values
+PartTest.java, lines 166-173: added test for the maximum inventory values
