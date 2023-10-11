@@ -63,27 +63,32 @@ Section G:
 
 12. InhousePartFrom.html, lines 27-28: added minInv field to inhouse part form
 13. InhousePartForm.html, lines 30-31: added maxInv field to inhouse part form
-14. InhousePartForm.html, lines 23-25: added prompt to show up when an error is detected in form fields (validation)
 
-15. OuthousePartFrom.html, lines 27-28: added minInv field to outhouse part form
-16. OuthousePartForm.html, lines 30-31: added maxInv field to outhouse part form
-17. OuthousePartForm.html, lines 24-26: added prompt to show up when an error is detected in form fields (validation)
+14. OuthousePartFrom.html, lines 27-28: added minInv field to outhouse part form
+15. OuthousePartForm.html, lines 30-31: added maxInv field to outhouse part form
 
-18. ValidMinMax.java, lines 1-8: added imports needed to run
-19. ValidMinMax.java, lines 10-12: specified the constraint, target, and retention of our annotation file
-20. ValidMinMax.java, line 13: declared class ValidMinMax
-21. ValidMinMax.java, lines 14-16: specified message, scripts, and payload
+16. ValidMinMax.java, lines 1-8: added imports needed to run
+17. ValidMinMax.java, lines 10-12: specified the constraint, target, and retention of our annotation file
+18. ValidMinMax.java, line 13: declared class ValidMinMax
+19. ValidMinMax.java, lines 14-16: specified message, scripts, and payload
 
-22. MinMaxValidator.java, lines 1-8: added imports needed to run
-23. MinMaxValidator.java, line 10: declared class that implements a constraint validator that our ValidMinMax class will use. Accepts a part object as input
-24. MinMaxValidator.java, lines 11-13: defined our context objects
-25. MinMaxValidator.java, lines 14-16: define our intialize class that is the super classs of constraint validator
-26. MinMaxValidator.java, lines 19-26: define our isValid class to actually do the check of whether or not a given part's inv is within the min-max range
+20. MinMaxValidator.java, lines 1-8: added imports needed to run
+21. MinMaxValidator.java, line 10: declared class that implements a constraint validator that our ValidMinMax class will use. Accepts a part object as input
+22. MinMaxValidator.java, lines 11-13: defined our context objects
+23. MinMaxValidator.java, lines 14-16: define our intialize class that is the super classs of constraint validator
+24. MinMaxValidator.java, lines 19-26: define our isValid class to actually do the check of whether or not a given part's inv is within the min-max range
 
-27. application.properties, line 6: updated h2 database name according to what I named it in my file system.
+25. application.properties, line 6: updated h2 database name according to what I named it in my file system.
 
 Section H:
+1. OuthousePartForm.html, lines 24-26: added prompt to show up when an error is detected in form fields (validation)
+2. InhousePartForm.html, lines 23-25: added prompt to show up when an error is detected in form fields (validation)
+3. ValidEnufParts.java, line 20: Updated message to reflect error more accurately
+4. EnufPartsValidator.java, line 37: added line to check that making more of a product does not reduce its associated parts inventory below its minimum inventory
 
 Section I:
-PartTest.java, lines 158-165: added test for the minimum inventory values
-PartTest.java, lines 166-173: added test for the maximum inventory values
+1. PartTest.java, lines 158-165: added test for the minimum inventory values
+2. PartTest.java, lines 166-173: added test for the maximum inventory values
+
+Section J:
+1. DeletePartValidator, lines ALL, DELETED FILE, unused file
